@@ -46,10 +46,12 @@ class _WelcomeState extends State<Welcome> {
             child: Align(
               alignment: Alignment.centerRight,
               child: new DotsIndicator(
-                  numberOfDot: pageLength,
+                  dotsCount: pageLength,
                   position: currentIndexPage,
-                  dotColor: Colors.black87,
-                  dotActiveColor: Colors.amber),
+                  decorator: DotsDecorator(
+                        color: Colors.black87,
+                        activeColor: Colors.amber,)
+                      ),
             ),
           ),
         )
